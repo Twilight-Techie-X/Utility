@@ -22,7 +22,7 @@ def add_seconds(time_str, add_sec):
     minutes = (total_seconds % 3600) // 60
     seconds = total_seconds % 60
 
-    return f"{hours:02}:{minutes:02}:{seconds:02}"
+    return f"{hours:02}:{minutes:02}:{seconds:02}\n"
 
 def format_time_part(time_part):
     """Format time part (hours, minutes, seconds) into SRT time format."""
