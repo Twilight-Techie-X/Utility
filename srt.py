@@ -15,7 +15,8 @@ def add_seconds(time_str, add_sec):
     hours = total_seconds // 3600
     minutes = (total_seconds % 3600) // 60
     seconds = total_seconds % 60
-    return f"{hours:02}:{minutes:02}:{seconds:02}"
+    print(f"{hours:02}:{minutes:02}:{seconds:02}")
+    return f"{hours:02}:{minutes:02}:{seconds:02}\n"
 
 def format_sub(current, next):
     current_time = current[0]
@@ -27,6 +28,7 @@ def format_sub(current, next):
     next_time = f'0{temp[-3] if len(temp) == 3 else '0'}:{temp[-2] if temp[-2] > 9 else f'0{temp[-2]}'}:{temp[-1] if temp[-1] > 9 else f'0{temp[-1]}'},000'
     formatted_time = f"{current_time} --> {next_time}\n"
     # formatted_time = "00:0"+current_time[:-1]+",000 --> 00:0"+next_time[:-1]+",000"+"\n"
+    print(formatted_time + current_sub)
     return formatted_time + current_sub
 
 def append_file(source_file, destination_file):   
